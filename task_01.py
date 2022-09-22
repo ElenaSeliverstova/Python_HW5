@@ -1,12 +1,8 @@
-# 1- Напишите программу, удаляющую из текста все слова, содержащие ""абв"".
-# 'абвгдейка - это передача' = >" - это передача"
+# Напишите программу, удаляющую из текста слова с "абв"
 
-s = 'абвгдейка - это передача'
-filter_ = 'абв'
+#1
+print(' '.join(filter(lambda x: not 'абв' in x, 'Мы неабв очень любим Питон иабв Джавуабв'.split())))
 
-def filter_text(text):
-    text = text.split(' ')
-    func = lambda word: 'абв' not in word
-    return ' '.join(list(filter(func, text)))
-
-print(filter_text(s))
+#2
+my_str='Мы неабв очень любим Питон иабв Джавуабв'.split()
+print(' '.join(word for word in my_str if 'абв' not in word))
